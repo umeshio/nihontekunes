@@ -1,0 +1,41 @@
+//- **********************************************************************
+//- footer
+//- **********************************************************************
+footer.l-footer
+  div.l-footer__top
+    div.l-footer__container.l-footer__container--has_grid
+      div.l-footer__grid
+        //-
+        div.c-logo.p-logo.p-logo--type_footer
+          a.c-logo__inner(href=`${relativePath}`)
+            img.c-logo__item(src=`${relativePath}assets/img/logo/logo.svg` alt="logo")
+      div.l-footer__grid
+        //-
+        div.p-sitemap
+          ul.p-sitemap__list
+            li.p-sitemap__divider
+              a.p-sitemap__item(href=`${relativePath}`)
+                p.p-sitemap__txt hoge
+            li.p-sitemap__divider
+              a.p-sitemap__item(href=`${relativePath}`)
+                p.p-sitemap__txt fuga
+            li.p-sitemap__divider
+              a.p-sitemap__item(href=`${relativePath}`)
+                p.p-sitemap__txt piyo
+            li.p-sitemap__divider
+              a.p-sitemap__item(href=`${relativePath}`)
+                p.p-sitemap__txt foo
+  div.l-footer__bottom
+    div.l-footer__container
+      //-
+      ul.p-sns
+        li.p-sns__divider
+          a.p-sns__item(href="https://www.facebook.com/" target="_blank")
+            img.p-sns__icon(src=`${relativePath}assets/img/icon/facebook.svg` alt="facebook")
+        li.p-sns__divider
+          a.p-sns__item(href="https://www.instagram.com/" target="_blank")
+            img.p-sns__icon(src=`${relativePath}assets/img/icon/insta.svg` alt="instagram")
+        li.p-sns__divider
+          a.p-sns__item(href="https://twitter.com/" target="_blank")
+            img.p-sns__icon(src=`${relativePath}assets/img/icon/twitter.svg` alt="twitter")
+      p.p-copy &copy; 2020 hoge

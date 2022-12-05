@@ -1,0 +1,73 @@
+/* ****************************************************************************************************
+
+  # loading
+  - project
+
+**************************************************************************************************** */
+@use '../../foundation/tool/global';
+// ```
+// div#js-loading.p-loading
+//   p.p-loading__logo
+//     img(src=`global.${_relativePath}assets/img/logo/logo.svg` alt="logo")
+//   div#js-progress.p-loading__progress
+// ```
+
+.p-loading {
+  @include global.z-index(loading);
+
+  position: fixed;
+  top: 0;
+  left: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  max-width: 100vw;
+  height: 100%;
+  overflow: hidden;
+  text-align: center;
+  visibility: visible;
+  background-color: global.$color-white;
+  opacity: 1;
+  transition: transform 500ms cubic-bezier(.165, .84, .44, 1) 300ms;
+}
+
+.p-loading.is-hidden {
+  transform: scaleX(0);
+  transform-origin: right;
+}
+
+/* ======================================================================
+
+  ## logo
+
+====================================================================== */
+.p-loading__logo {
+  z-index: 2;
+  @include global.fitted-image(
+    $width: 9.6rem,
+    $ratioWidth: 174,
+    $ratioHeight: 40
+  );
+}
+@media print, screen and (min-width: global.$breakpoint-min-md) {
+  .p-loading__logo {
+    width: 14rem;
+  }
+}
+
+/* ======================================================================
+
+  ## progress
+
+====================================================================== */
+.p-loading__progress {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 1;
+  display: block;
+  width: 0;
+  height: 100%;
+  background-color: global.$color-gray-light;
+}

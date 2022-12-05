@@ -1,0 +1,124 @@
+/* ****************************************************************************************************
+
+  # article-list
+  - project
+
+**************************************************************************************************** */
+@use '../../foundation/tool/global';
+
+// ```
+// .p-article-list
+//   .p-article-list__item
+//     .p-article-list__inner
+//       .p-article-list__head
+//         .p-article-list__date
+//         .p-article-list__title
+//       .p-article-list__body
+//         .p-article-list__txt
+//   .p-article-list__item
+// ```
+
+.p-article-list {
+  position: relative;
+  display: block;
+}
+
+/* ======================================================================
+
+  ## item
+
+====================================================================== */
+.p-article-list__item:nth-child(1) {
+  border-top: 1px dashed global.$color-border;
+}
+
+.p-article-list__item {
+  position: relative;
+  display: block;
+  padding: 1.4rem;
+  border-bottom: 1px dashed global.$color-border;
+}
+@media print, screen and (min-width: global.$breakpoint-min-md) {
+  .p-article-list__item {
+    padding: 2.4rem 2.6rem;
+  }
+}
+
+/* ======================================================================
+
+  ## inner
+
+====================================================================== */
+.p-article-list__inner {
+  display: block;
+}
+
+/* ======================================================================
+
+  ## head
+
+====================================================================== */
+.p-article-list__head {
+  position: relative;
+}
+
+/* ======================================================================
+
+  ## date
+
+====================================================================== */
+.p-article-list__date {
+  position: relative;
+  font-size: global.$font-size-sm;
+  line-height: 1.4;
+  color: global.$color-txt;
+}
+@media print, screen and (min-width: global.$breakpoint-min-md) {
+  .p-article-list__date {
+    font-size: global.$font-size-sm-mq-min-md;
+  }
+}
+
+/* ======================================================================
+
+  ## title
+
+====================================================================== */
+.p-article-list__title {
+  font-size: global.$font-size-md;
+  font-weight: global.$font-weight-bold;
+  color: global.$color-txt;
+}
+
+.p-article-list__date + .p-article-list__title {
+  margin-top: .5rem;
+}
+@media print, screen and (min-width: global.$breakpoint-min-md) {
+  .p-article-list__title {
+    font-size: global.$font-size-md-mq-min-md;
+  }
+}
+
+/* ======================================================================
+
+  ## body
+
+====================================================================== */
+.p-article-list__head + .p-article-list__body {
+  margin-top: 1.4rem;
+}
+
+/* ======================================================================
+
+  txt
+
+====================================================================== */
+.p-article-list__txt {
+  font-size: global.$font-size;
+  color: global.$color-txt;
+}
+@media print, screen and (min-width: global.$breakpoint-min-md) {
+  .p-article-list__txt {
+    font-size: global.$font-size-mq-min-md;
+  }
+}

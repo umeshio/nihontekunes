@@ -1,0 +1,45 @@
+// https://www.typescriptlang.org/ja/tsconfig
+// https://qiita.com/ryokkkke/items/390647a7c26933940470
+{
+  "include": [
+    "./src/assets/js/**/*.ts"
+  ],
+  "exclude": [
+    "node_modules",
+    "./src/assets/js/**/_*",
+    "./src/assets/js/module/vendor/",
+  ],
+  "compilerOptions": {
+    // ▼TypeScriptのコードを何に変換するかを指定する
+    "target": "ES2020",
+    "module": "ES2020",
+    // ▼TypeScriptと一緒にJavaScriptもtscの処理対象に含められるようにする
+    "allowJs": true,
+    // ▼SDocを使うことでjsファイルの型チェックを行う
+    // "checkJs": true,
+    "strict": true,
+    // ▼(変換はBabelが担当するので)tscはファイルを出力しないように指示する
+    // "noEmit": true,
+    // "lib": [
+    //   "dom", "ES5", "ScriptHost", "ES2015.Core"
+    // ],
+    // ▼各ファイルを個々のモジュールとしてトランスパイルする
+    // Babel では技術的制約で、ネームスペースなどのファイルを跨いだ構文を解釈してトランスパイルできない
+    // このオプションを有効にすれば、Babel でトランスパイルできない TypeScriptの構文を検出して警告を出す
+    "isolatedModules": true,
+    // ▼ES modules 形式以外の、CommonJS 形式などのモジュールを default import 形式で読み込める
+    // 例）const module = require('module') -> import module from 'module'
+    "esModuleInterop": true,
+    "allowSyntheticDefaultImports": true,
+    "noImplicitAny": true,
+    "noImplicitThis": true,
+    "strictNullChecks": true,
+    "forceConsistentCasingInFileNames": true,
+    "noFallthroughCasesInSwitch": true,
+    // 相対パスではないモジュールは node_modules 配下を検索する
+    "moduleResolution": "node",
+    "resolveJsonModule": true,
+    "sourceMap": false,
+    "removeComments": true,
+  }
+}

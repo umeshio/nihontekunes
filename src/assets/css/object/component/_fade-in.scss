@@ -1,0 +1,22 @@
+/* ****************************************************************************************************
+
+  # fade-in
+  - component
+  - 透明度の調整で浮かび上がる画像
+
+**************************************************************************************************** */
+@use '../../foundation/tool/global';
+
+$fade-in-animation-duration: .6s;
+$fade-in-animation-function: cubic-bezier(.455, .03, .515, .955);
+$fade-in-animation-duration-delay: 0s;
+
+.c-fade-in {
+  opacity: 0;
+  transition: opacity $fade-in-animation-duration $fade-in-animation-function
+    $fade-in-animation-duration-delay;
+}
+
+.c-fade-in.is-inview {
+  opacity: 1;
+}

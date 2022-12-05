@@ -1,0 +1,119 @@
+/* ****************************************************************************************************
+
+  # grid
+  - component
+  - tailwind参考
+
+**************************************************************************************************** */
+@use '../../foundation/tool/global';
+
+.c-grid {
+  display: flex;
+}
+
+/* ### cols
+---------------------------------------------------------------------- */
+@for $i from 1 through 12 {
+  .c-grid.c-grid--cols_#{$i} {
+    grid-template-columns: repeat(#{$i}, minmax(0, 1fr));
+  }
+}
+
+/* ### col-mq-min-md
+---------------------------------------------------------------------- */
+@for $i from 1 through 12 {
+  @media print, screen and (min-width: global.$breakpoint-min-md) {
+    .c-grid.c-grid--cols-mq-min-md_#{$i} {
+      grid-template-columns: repeat(#{$i}, minmax(0, 1fr));
+    }
+  }
+}
+
+/* ### gap
+---------------------------------------------------------------------- */
+@for $i from 1 through 10 {
+  .c-grid.c-grid--gap_#{$i}rem {
+    row-gap: #{$i}rem;
+    column-gap: #{$i}rem;
+  }
+}
+// x column
+@for $i from 1 through 10 {
+  .c-grid.c-grid--gap-x-#{$i}rem {
+    column-gap: #{$i}rem;
+  }
+}
+// y row
+@for $i from 1 through 10 {
+  .c-grid.c-grid--gap-y-#{$i}rem {
+    row-gap: #{$i}rem;
+  }
+}
+
+/* ### gap-mq-min-md_6rem
+---------------------------------------------------------------------- */
+@for $i from 1 through 10 {
+  @media print, screen and (min-width: global.$breakpoint-min-md) {
+    .c-grid.c-grid--gap-mq-min-md_#{$i}rem {
+      row-gap: #{$i}rem;
+      column-gap: #{$i}rem;
+    }
+  }
+}
+// x column
+@for $i from 1 through 10 {
+  @media print, screen and (min-width: global.$breakpoint-min-md) {
+    .c-grid.c-grid--gap-x-mq-min-md_#{$i}rem {
+      column-gap: #{$i}rem;
+    }
+  }
+}
+// y row
+@for $i from 1 through 10 {
+  @media print, screen and (min-width: global.$breakpoint-min-md) {
+    .c-grid.c-grid--gap-y-mq-min-md_#{$i}rem {
+      row-gap: #{$i}rem;
+    }
+  }
+}
+
+/* ======================================================================
+
+  item
+
+====================================================================== */
+// @media print, screen and (max-width: global.$breakpoint-max-md) {
+// @media print, screen and (min-width: global.$breakpoint-min-md) {
+//   .c-grid__item {
+//   }
+// }
+
+/* ### col
+---------------------------------------------------------------------- */
+// auto
+.c-grid__item.c-grid__item--col_auto {
+  grid-column: auto;
+}
+// 1~12
+@for $i from 1 through 12 {
+  .c-grid.c-grid--col_span-#{$i} {
+    grid-column: span #{$i} / span #{$i};
+  }
+}
+
+/* ### col-mq-min-md
+---------------------------------------------------------------------- */
+// auto
+@media print, screen and (min-width: global.$breakpoint-min-md) {
+  .c-grid__item.c-grid__item--col-mq-min-md_auto {
+    grid-column: auto;
+  }
+}
+// 1~12
+@for $i from 1 through 12 {
+  @media print, screen and (min-width: global.$breakpoint-min-md) {
+    .c-grid__item.c-grid__item--col-mq-min-md_span-#{$i} {
+      grid-column: span #{$i} / span #{$i};
+    }
+  }
+}

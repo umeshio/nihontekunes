@@ -1,0 +1,45 @@
+/* ****************************************************************************************************
+
+  # color
+  - foundation > variable > base
+
+**************************************************************************************************** */
+
+$color-white: #fff;
+$color-black: #000;
+$color-gray: gray !default;
+$color-gray-light: lightgray !default;
+$color-gray-med: darkgray !default;
+$color-gray-dark: dimgray !default;
+
+/* 赤
+---------------------------------------------------------------------- */
+$color-red: red !default;
+
+/* ベージュ
+---------------------------------------------------------------------- */
+$color-beige: beige !default;
+
+/* 青
+---------------------------------------------------------------------- */
+$color-blue: blue !default;
+
+/* 緑
+---------------------------------------------------------------------- */
+$color-green: green !default;
+
+/* txt
+---------------------------------------------------------------------- */
+$color-txt: dimgray !default;
+$color-txt-dark: #000 !default;
+$color-txt-light: lightgray !default;
+$color-link: red !default;
+
+/* border
+---------------------------------------------------------------------- */
+$color-border: gray !default;
+$color-border-dark: dimgray !default;
+
+/* input系列
+---------------------------------------------------------------------- */
+$color-input-bg: $color-gray-light !default;

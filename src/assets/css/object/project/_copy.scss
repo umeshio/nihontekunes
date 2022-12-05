@@ -1,0 +1,19 @@
+/* ****************************************************************************************************
+
+  # copy
+  - project
+
+**************************************************************************************************** */
+@use '../../foundation/tool/global';
+
+.p-copy {
+  margin-top: 1rem;
+  font-size: global.$font-size-sm;
+  text-align: center;
+}
+@media print, screen and (min-width: global.$breakpoint-min-md) {
+  .p-copy {
+    margin-top: 3rem;
+    font-size: global.$font-size-mq-min-md;
+  }
+}

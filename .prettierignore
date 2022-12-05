@@ -1,0 +1,12 @@
+dist/
+build/
+htdocs/
+temp/
+node_modules/
+package.json
+package-lock.json
+tsconfig.json
+tsconfig.eslint.json
+*.html
+*.md
+.prettierrc

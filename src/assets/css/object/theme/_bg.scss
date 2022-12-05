@@ -1,0 +1,31 @@
+/* ****************************************************************************************************
+
+  # bg
+  - theme
+
+**************************************************************************************************** */
+@use '../../foundation/tool/global';
+
+.t-bg-skelton {
+  background-color: transparent !important;
+}
+
+.t-bg-white {
+  background-color: global.$color-white;
+}
+
+.t-bg-gray {
+  background-color: global.$color-gray-light;
+}
+
+.t-bg-stripe-blue {
+  background-color: global.$color-white;
+  background-image: repeating-linear-gradient(
+    90deg,
+    transparent,
+    transparent 50%,
+    global.$color-blue 50%,
+    global.$color-blue 100%
+  );
+  background-size: 3.7rem 3.7rem;
+}

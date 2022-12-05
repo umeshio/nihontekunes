@@ -1,0 +1,30 @@
+/* ****************************************************************************************************
+
+  # txt-size
+  - utility
+
+**************************************************************************************************** */
+
+.u-txt-size-xs {
+  @include global.font-size-xs();
+}
+
+.u-txt-size-s {
+  @include global.font-size-s();
+}
+
+.u-txt-size {
+  @include global.font-size();
+}
+
+.u-txt-size-m {
+  @include global.font-size-m();
+}
+
+.u-txt-size-l {
+  @include global.font-size-l();
+}
+
+.u-txt-size-xl {
+  @include global.font-size-xl();
+}

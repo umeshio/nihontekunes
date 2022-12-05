@@ -1,0 +1,128 @@
+/* ****************************************************************************************************
+
+  # gnav
+  - project
+
+**************************************************************************************************** */
+@use '../../foundation/tool/global';
+
+.p-gnav {
+  position: fixed;
+  top: 0;
+  right: 0;
+  display: block;
+  width: 100%;
+  height: 100%;
+  padding: (global.$header-height + 3.8rem) global.$content-side-gutter 5rem;
+  overflow-y: auto;
+  font-size: 1.4rem;
+  background-color: global.$color-gray;
+  transition: transform .1s;
+  transform: translateX(100%);
+  -webkit-overflow-scrolling: touch;
+  @include global.z-index(gnav);
+}
+
+.p-gnav.is-active {
+  transition: transform 500ms cubic-bezier(.165, .84, .44, 1) 300ms;
+  transform: translateX(0);
+}
+@media print, screen and (min-width: global.$breakpoint-min-md) {
+  .p-gnav {
+    position: relative;
+    width: auto;
+    padding: 0;
+    overflow: visible;
+    background-color: transparent;
+    transform: translateX(0);
+  }
+}
+
+/* ======================================================================
+
+  ## list
+
+====================================================================== */
+.p-gnav__list {
+  display: block;
+}
+@media print, screen and (min-width: global.$breakpoint-min-md) {
+  .p-gnav__list {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+  }
+}
+
+/* ======================================================================
+
+  ## divider
+
+====================================================================== */
+.p-gnav__divider {
+  position: relative;
+  display: block;
+}
+
+.p-gnav__divider + .p-gnav__divider {
+  margin-top: 2.6rem;
+}
+@media print, screen and (min-width: global.$breakpoint-min-md) {
+  .p-gnav__divider + .p-gnav__divider {
+    margin-top: 0;
+    margin-left: 3rem;
+  }
+}
+
+/* ======================================================================
+
+  ## item
+
+====================================================================== */
+.p-gnav__item {
+  position: relative;
+  display: block;
+  padding: .3rem 1rem .3rem 0;
+  font-size: global.$font-size-md;
+  font-weight: global.$font-weight-bold;
+  color: global.$color-white;
+
+  &::after {
+    position: absolute;
+    top: 50%;
+    right: 0;
+    display: block;
+    width: .8rem;
+    height: .8rem;
+    content: '';
+    border-top: 1px solid global.$color-white;
+    border-right: 1px solid global.$color-white;
+    transform: translate(-12%, -50%) scale(1, .8) rotate(45deg);
+  }
+}
+@media print, screen and (min-width: global.$breakpoint-min-md) {
+  .p-gnav__item {
+    padding: .4rem .8rem;
+    font-size: global.$font-size-md;
+    color: global.$color-black;
+
+    &::after {
+      content: none;
+    }
+  }
+}
+
+/* ======================================================================
+
+  txt
+
+====================================================================== */
+.p-gnav__txt {
+  line-height: 1.4;
+}
+// @media print, screen and (min-width: global.$breakpoint-min-md) {
+//   .p-gnav__txt {
+//   }
+// }

@@ -1,0 +1,25 @@
+block variables
+doctype html
+html(lang=pageLang)
+  head
+    include /_includes/_base/_meta
+    include /_includes/_base/_libs
+    //-
+      // Google Tag Manager
+      // End Google Tag Manager
+  body(id=_idName)
+    div#js-body.l-body
+      include /_includes/_base/_header
+      if _pagePrefix == 'home'
+        - var _className = ['l-main'];
+      else
+        - _className = ['l-main', 'l-main--type_subpage'];
+      div#js-main(class=_className)
+        block content
+      include /_includes/_base/_footer
+      div.p-modal-layer#js-modal-layer
+    include /_includes/_base/_loading
+    include /_includes/_base/_script
+    //-
+      // Google Tag Manager (noscript)
+      // End Google Tag Manager (noscript)

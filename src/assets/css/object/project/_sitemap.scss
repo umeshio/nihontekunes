@@ -1,0 +1,85 @@
+/* ****************************************************************************************************
+
+  # sitemap
+  - project
+
+**************************************************************************************************** */
+@use '../../foundation/tool/global';
+// .p-sitemap
+//   ul.p-sitemap__list
+//     li.p-sitemap__divider
+//       a.p-sitemap__item(href="")
+//         p.p-sitemap__txt
+//     li.p-sitemap__divider
+//       a.p-sitemap__item(href="")
+//         p.p-sitemap__txt
+//   ul.p-sitemap__list
+//     li.p-sitemap__divider
+//       a.p-sitemap__item(href="")
+//         p.p-sitemap__txt
+
+.p-sitemap {
+  position: relative;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-start;
+  justify-content: space-between;
+  width: 100%;
+}
+
+/* ======================================================================
+
+  ## list
+
+====================================================================== */
+.p-sitemap__list {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-start;
+  justify-content: space-between;
+  width: 100%;
+}
+
+/* ======================================================================
+
+  ## divider
+
+====================================================================== */
+.p-sitemap__divider {
+  display: block;
+  width: 48%;
+  margin: 0 0 4%;
+}
+
+.p-sitemap__list > .p-sitemap__divider:nth-child(2n + 1):nth-last-child(-n + 2),
+.p-sitemap__list
+  > .p-sitemap__divider:nth-child(2n + 1):nth-last-child(-n + 2)
+  ~ .p-sitemap__divider {
+  margin-bottom: 0;
+}
+
+/* ======================================================================
+
+  ## item
+
+====================================================================== */
+.p-sitemap__item {
+  display: inline-block;
+  padding: .3rem 0;
+  line-height: 1.4;
+  color: global.$color-txt-dark;
+}
+
+/* ======================================================================
+
+  ## txt
+
+====================================================================== */
+.p-sitemap__txt {
+  font-size: global.$font-size-sm;
+}
+@media print, screen and (min-width: global.$breakpoint-min-md) {
+  .p-sitemap__txt {
+    font-size: global.$font-size;
+  }
+}

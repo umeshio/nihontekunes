@@ -1,0 +1,6 @@
+dist/
+build/
+htdocs/
+temp/
+node_modules/
+**/_sanitize.scss

@@ -1,0 +1,108 @@
+extend /_includes/_layout
+append variables
+  - var pageTitle = "";
+  - var pageDescription = site.description;
+  - var pageKeywords = site.keywords;
+  - var pageOgpTitle = "";
+  - var pageOgpImage = site.ogpImage
+  - var pageLang = "ja";
+  - var pageOgpType = "website";
+  - var pageUrl = absolutePath;
+  - var pagePrefix = "test";
+
+block content
+
+  //- **********************************************************************
+  //- kv
+  //- **********************************************************************
+  div.l-kv
+    div.l-kv__container
+      div.p-kv-title
+        h1.p-kv-title__item test
+    div.l-kv__image
+      img.js-ofi(src=`${relativePath}assets/img/other/dummy.jpg` alt="")
+
+
+  div#js-header-trg
+  //- **********************************************************************
+  //- section
+  //- **********************************************************************
+  section.l-section.l-section--gap_top-l
+    div.l-container
+      h1.p-title card
+      div.p-card
+        div.p-card__divider
+          a.p-card__item(href="#")
+            div.p-card__head
+              div.p-card__image
+                img.js-ofi(src=`${relativePath}assets/img/other/dummy.jpg` alt="")
+            div.p-card__body
+              div.p-card__date
+                time(datetime="2021-07-30") 2020.07.07 tue
+              h2.p-card__title そうだって云ったねえ、わたしも小さいとき、そんなこと聞いたよ。
+              p.p-card__txt それに第一にね、そこへ行くと誰でも上手に歌えるようになるって。
+        div.p-card__divider
+          a.p-card__item(href="#")
+            div.p-card__head
+              div.p-card__image
+                img.js-ofi(src=`${relativePath}assets/img/other/dummy.jpg` alt="")
+            div.p-card__body
+              div.p-card__date
+                time(datetime="2021-07-30") 2020.07.07 tue
+              h2.p-card__title そうだって云ったねえ、わたしも小さいとき、そんなこと聞いたよ。
+              p.p-card__txt それに第一にね、そこへ行くと誰でも上手に歌えるようになるって。
+        div.p-card__divider
+          a.p-card__item(href="#")
+            div.p-card__head
+              div.p-card__image
+                img.js-ofi(src=`${relativePath}assets/img/other/dummy.jpg` alt="")
+            div.p-card__body
+              div.p-card__date
+                time(datetime="2021-07-30") 2020.07.07 tue
+              h2.p-card__title そうだって云ったねえ、わたしも小さいとき、そんなこと聞いたよ。
+              p.p-card__txt それに第一にね、そこへ行くと誰でも上手に歌えるようになるって。
+        div.p-card__divider
+          a.p-card__item(href="#")
+            div.p-card__head
+              div.p-card__image
+                img.js-ofi(src=`${relativePath}assets/img/other/dummy.jpg` alt="")
+            div.p-card__body
+              div.p-card__date
+                time(datetime="2021-07-30") 2020.07.07 tue
+              h2.p-card__title そうだって云ったねえ、わたしも小さいとき、そんなこと聞いたよ。
+              p.p-card__txt それに第一にね、そこへ行くと誰でも上手に歌えるようになるって。
+      div.p-btn
+        a.p-btn__item(href=`${relativePath}`)
+          p.p-btn__txt もっと見る
+
+
+  //- **********************************************************************
+  //- news
+  //- **********************************************************************
+  section.l-section.l-section--gap_bottom-lg
+    div.l-container
+      h1.p-title accordion
+      div.c-divider
+        div.c-accordion.p-accordion.js-acc
+          div.c-accordion__head.p-accordion__head.js-acc__trg
+            h2.p-accordion__title ミーロもうなずきました。
+          div.c-accordion__body.p-accordion__body
+            p.p-article-overview__txt 元来ミーロなんかよほど歌がうまいのだろうとわたくしは思いました。
+            p.p-article-overview__txt 「ぼくは小さいときはいつでもいまごろ野原へ遊びに出た。」ファゼーロが云いました。
+            p.p-article-overview__txt 「そうかねえ。」
+      div.c-divider.c-divider--gap_s
+        div.c-accordion.p-accordion.js-acc
+          div.c-accordion__head.p-accordion__head.js-acc__trg
+            h2.p-accordion__title ミーロもうなずきました。
+          div.c-accordion__body.p-accordion__body
+            p.p-article-overview__txt 元来ミーロなんかよほど歌がうまいのだろうとわたくしは思いました。
+            p.p-article-overview__txt 「ぼくは小さいときはいつでもいまごろ野原へ遊びに出た。」ファゼーロが云いました。
+            p.p-article-overview__txt 「そうかねえ。」
+      div.c-divider.c-divider--gap_s
+        div.c-accordion.p-accordion.js-acc
+          div.c-accordion__head.p-accordion__head.js-acc__trg
+            h2.p-accordion__title ミーロもうなずきました。
+          div.c-accordion__body.p-accordion__body
+            p.p-article-overview__txt 元来ミーロなんかよほど歌がうまいのだろうとわたくしは思いました。
+            p.p-article-overview__txt 「ぼくは小さいときはいつでもいまごろ野原へ遊びに出た。」ファゼーロが云いました。
+            p.p-article-overview__txt 「そうかねえ。」

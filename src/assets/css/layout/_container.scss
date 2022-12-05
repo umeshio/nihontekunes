@@ -1,0 +1,30 @@
+/* ****************************************************************************************************
+
+  # container
+  - layout
+  - 横幅などの指定
+
+**************************************************************************************************** */
+// l-section > l-container
+@use '../foundation/tool/global';
+
+.l-container {
+  position: relative;
+  @include global.content-width-padding();
+}
+
+/* full
+---------------------------------------------------------------------- */
+.l-container.l-container--full {
+  padding-right: 0;
+  padding-left: 0;
+}
+
+/* pcサイズからfull
+---------------------------------------------------------------------- */
+@media print, screen and (min-width: global.$breakpoint-min-md) {
+  .l-container.l-container--full_from-m {
+    padding-right: 0;
+    padding-left: 0;
+  }
+}

@@ -1,0 +1,65 @@
+/* ****************************************************************************************************
+
+  # tab
+  category: project
+
+**************************************************************************************************** */
+@use '../../foundation/tool/global';
+
+.p-tab {
+  position: relative;
+  display: block;
+}
+// @media print, screen and (min-width: global.$breakpoint-min-md) {
+//   .p-tab {
+//   }
+// }
+
+/* ======================================================================
+
+  body
+
+====================================================================== */
+.p-tab__body {
+  position: relative;
+}
+
+.p-tab__head + .p-tab__body {
+  margin-top: 1.6rem;
+}
+@media print, screen and (min-width: global.$breakpoint-min-md) {
+  .p-tab__head + .p-tab__body {
+    margin-top: 2.4rem;
+  }
+}
+
+/* ======================================================================
+
+  cont
+
+====================================================================== */
+.p-tab__cont {
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: block;
+  width: 100%;
+  height: 100%;
+  visibility: hidden;
+  opacity: 0;
+  transition: height 0s global.$ease-out-custom .25s,
+    margin 0s global.$ease-out-custom .25s,
+    padding 0s global.$ease-out-custom .25s,
+    opacity .15s global.$transition-timing-function,
+    visibility .15s global.$transition-timing-function;
+}
+// アクティブ時
+.p-tab__cont.is-current {
+  position: relative;
+  visibility: visible;
+  opacity: 1;
+  transition: height 0s global.$ease-out-custom,
+    margin 0s global.$ease-out-custom, padding 0s global.$ease-out-custom,
+    opacity .2s global.$transition-timing-function .15s,
+    visibility .2s global.$transition-timing-function .15s;
+}

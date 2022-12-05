@@ -1,0 +1,67 @@
+extend /_includes/_layout
+append variables
+  - var pageTitle = "";
+  - var pageDescription = site.description;
+  - var pageKeywords = site.keywords;
+  - var pageOgpTitle = "";
+  - var pageOgpImage = site.ogpImage
+  - var pageLang = "ja";
+  - var pageOgpType = "website";
+  - var pageUrl = absolutePath;
+  - var pagePrefix = "home";
+
+block content
+
+  //- **********************************************************************
+  //- キービジュアル
+  //- **********************************************************************
+  div.l-home-kv
+    div.l-home-kv__container
+      div.s-home-kv-title
+        img.s-home-kv-title__img-deco(src=`${relativePath}assets/img/top_mv_ring.png`, alt="")
+        h1.s-home-kv-title__item.s-home-kv-title__item--top Connect
+        h1.s-home-kv-title__item.s-home-kv-title__item--bottom Tomorrow
+        img.s-home-kv-title__img-text(src=`${relativePath}assets/img/top_mv_txt_ja.png`, alt="あしたをつなぐ")
+        img.s-home-kv-title__img-main(src=`${relativePath}assets/img/top_mv_harness.png`, alt="")
+    div.l-home-kv__image
+      img.js-ofi(src=`${relativePath}assets/img/top_mv_bg.jpg` alt="")
+    div.s-home-kv-title__scrolldown
+      span Scroll
+      span.s-home-kv-title__scrolldown__line
+
+
+
+  div#js-header-trg
+  //- **********************************************************************
+  //- section strength
+  //- **********************************************************************
+  section.l-section.l-section--gap_0
+    div.l-container.l-container--full_from-m
+      div.p-strength__top
+      div.p-strength__pc
+      div.p-strength__sp
+      
+
+
+  //- **********************************************************************
+  //- news
+  //- **********************************************************************
+  section.l-section.l-section--gap_bottom-lg
+    div.l-container
+      h1.p-title news
+      ul.p-article-list
+        li.p-article-list__item
+          a.p-article-list__inner(href="#")
+            div.p-article-list__head
+              time.p-article-list__date(datetime="2020-07-07") 2020.07.07 tue
+              h2.p-article-list__title 二、つめくさのあかり
+            div.p-article-list__body
+              p.p-article-list__txt それからちょうど十日ばかりたって、夕方、わたくしが役所から帰って両手でカフスをはずしていましたら、いきなりあのファゼーロが、戸口から顔を出しました。
+        li.p-article-list__item
+          a.p-article-list__inner(href="#")
+            div.p-article-list__head
+              time.p-article-list__date(datetime="2020-07-07") 2020.07.07 tue
+              h2.p-article-list__title そしてわたくしが、まだびっくりしているうちに、
+            div.p-article-list__body
+              p.p-article-list__txt 「とうとう来たよ、今晩は。」と云いました。
+

@@ -1,0 +1,84 @@
+/* ****************************************************************************************************
+
+  # home-kv
+  - layout
+
+**************************************************************************************************** */
+@use '../foundation/tool/global';
+
+.l-home-kv {
+  position: relative;
+  display: block;
+  width: 100%;
+  height: 25rem;
+}
+@media print, screen and (min-width: global.$breakpoint-min-md) {
+  .l-home-kv {
+    height: 50rem;
+  }
+}
+
+/* ======================================================================
+
+  ## container
+
+====================================================================== */
+.l-home-kv__container {
+  position: relative;
+  z-index: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
+  padding: 0 global.$content-side-gutter;
+}
+@media print, screen and (min-width: global.$breakpoint-min-md) {
+  .l-home-kv__container {
+    height: 50rem;
+    padding: 0 global.$content-side-gutter-mq-min-md;
+  }
+}
+
+/* ======================================================================
+
+  ## image
+
+====================================================================== */
+.l-home-kv__image {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 0;
+  display: block;
+  width: 100%;
+  height: 100%;
+
+  &::after {
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 1;
+    display: block;
+    width: 100%;
+    height: 100%;
+    content: '';
+    background-color: #071505;
+    mix-blend-mode: overlay;
+    opacity: .7;
+  }
+}
+
+/* ### img
+---------------------------------------------------------------------- */
+.l-home-kv__image > img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 0;
+  display: block;
+  width: 100%;
+  height: 100%;
+  font-family: 'object-fit: cover;';
+  object-fit: cover;
+}

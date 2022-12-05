@@ -1,0 +1,45 @@
+/* ****************************************************************************************************
+
+  # hide
+  - utility
+
+**************************************************************************************************** */
+@use '../../foundation/tool/global';
+
+/* ======================================================================
+
+  〜まで消す
+
+====================================================================== */
+// ▼pcのときまで消す
+@media print, screen and (max-width: global.$breakpoint-max-lg) {
+  .u-hide-mq-max-lg {
+    display: none !important;
+  }
+}
+
+// ▼ipadのときまで消す
+@media print, screen and (max-width: global.$breakpoint-max-md) {
+  .u-hide-mq-max-md {
+    display: none !important;
+  }
+}
+
+/* ======================================================================
+
+  〜から消す
+
+====================================================================== */
+// ▼pcから消す
+@media print, screen and (min-width: global.$breakpoint-min-lg) {
+  .u-hide-mq-min-lg {
+    display: none !important;
+  }
+}
+
+// ▼ipadから消す
+@media print, screen and (min-width: global.$breakpoint-min-md) {
+  .u-hide-mq-min-md {
+    display: none !important;
+  }
+}

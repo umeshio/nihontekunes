@@ -1,0 +1,32 @@
+/* ****************************************************************************************************
+
+  # sentnece
+  - component
+
+**************************************************************************************************** */
+@use '../../foundation/tool/global';
+
+$sentence-gap: 1rem;
+$sentence-gap-mq-min-md: 1.4rem;
+
+.c-sentence {
+  position: relative;
+}
+
+/* ======================================================================
+
+  ## item
+
+====================================================================== */
+.c-sentence__item {
+  & + & {
+    margin-top: $sentence-gap;
+  }
+}
+@media print, screen and (min-width: global.$breakpoint-min-md) {
+  .c-sentence__item {
+    & + & {
+      margin-top: $sentence-gap-mq-min-md;
+    }
+  }
+}

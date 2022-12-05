@@ -1,0 +1,49 @@
+/* ======================================================================
+
+  # js
+  - components
+
+====================================================================== */
+@use '../../foundation/tool/global';
+
+//- **********************************************************************
+//- 横に横にスクロール
+//- **********************************************************************
+
+.c-js-side-scroll {
+  background-color: #1b1717;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.c-js-side-scroll-list-wrapper {
+  position: relative;
+  width: 100%;
+  height: 700px;
+}
+
+.c-js-side-scroll-list {
+  position: absolute;
+  top: 60px;
+  left: 0;
+  display: flex;
+  gap: 0 60px;
+}
+
+.c-js-side-scroll-item {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 300px;
+  height: 420px;
+  background-color: #eeebdd;
+  color: #1b1717;
+  font-size: 32px;
+  font-weight: 700;
+}
+
+.c-js-side-scroll-item + .c-js-side-scroll-item {
+  margin-left: 60px;
+}
+

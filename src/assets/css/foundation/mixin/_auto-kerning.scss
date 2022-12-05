@@ -1,0 +1,13 @@
+/* ****************************************************************************************************
+
+  # auto-kerning
+  - foundation > mixin
+  - プロポーショナルメトリクスで自動カーニング（オープンタイプフォントのみ）
+
+**************************************************************************************************** */
+
+@mixin auto-kerning($letterSpace: .1rem) {
+  font-feature-settings: 'palt';
+  font-variant-ligatures: no-common-ligatures;
+  letter-spacing: $letterSpace;
+}

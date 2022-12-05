@@ -1,0 +1,19 @@
+/* ****************************************************************************************************
+
+  # color
+  - theme
+
+**************************************************************************************************** */
+@use '../../foundation/tool/global';
+
+.t-color-white {
+  color: global.$color-white !important;
+}
+
+.t-color-black {
+  color: global.$color-txt !important;
+}
+
+.t-color-red {
+  color: global.$color-red !important;
+}

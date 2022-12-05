@@ -1,0 +1,53 @@
+/* ****************************************************************************************************
+
+  # logo
+  category: project
+
+**************************************************************************************************** */
+@use '../../foundation/tool/global';
+// ```
+// div.c-logo.p-logo.p-logo--type_header
+//   a.c-logo__inner(href=`global.${_relativePath}`)
+//     img.c-logo__item(src=`global.${_relativePath}assets/img/logo/logo.svg` alt="logo")
+// ```
+
+.p-logo {
+  position: relative;
+  display: block;
+}
+
+/* ## header
+---------------------------------------------------------------------- */
+.p-logo.p-logo--type_header {
+  @include global.z-index(over-gnav);
+
+  position: relative;
+  width: 10.2rem;
+}
+@media print, screen and (min-width: global.$breakpoint-min-md) {
+  .p-logo.p-logo--type_header {
+    width: 16rem;
+  }
+}
+
+/* ## footer
+---------------------------------------------------------------------- */
+.p-logo.p-logo--type_footer {
+  width: 13.8rem;
+  margin: 0 auto 3.2rem;
+}
+@media print, screen and (min-width: global.$breakpoint-min-md) {
+  .p-logo.p-logo--type_footer {
+    max-width: 16rem;
+    margin: 0 0 2rem;
+  }
+}
+
+/* ======================================================================
+
+  ## c-logo__inner
+
+====================================================================== */
+.p-logo .c-logo__inner {
+  @include global.fitted-image($ratioWidth: 174, $ratioHeight: 40);
+}

@@ -1,0 +1,31 @@
+/* ****************************************************************************************************
+
+  # txt-align
+  - utility
+
+**************************************************************************************************** */
+@use '../../foundation/tool/global';
+
+.u-txt-align-right {
+  text-align: right !important;
+}
+
+.u-txt-align-center {
+  text-align: center !important;
+}
+
+.u-txt-align-left {
+  text-align: left !important;
+}
+
+@media print, screen and (min-width: global.$breakpoint-min-lg) {
+  .u-txt-align-center-mq-min-lg {
+    text-align: center !important;
+  }
+}
+
+@media print, screen and (min-width: global.$breakpoint-min-md) {
+  .u-txt-align-center-mq-min-md {
+    text-align: center !important;
+  }
+}

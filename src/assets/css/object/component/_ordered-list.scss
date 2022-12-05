@@ -1,0 +1,33 @@
+/* ****************************************************************************************************
+
+  # ordered-list
+  - component
+
+**************************************************************************************************** */
+
+.c-ordered-list {
+  display: block;
+  padding: 0 0 0 1.8rem;
+  list-style-type: decimal;
+}
+
+.c-ordered-list__item > .c-ordered-list {
+  margin-top: .5rem;
+}
+
+/* ======================================================================
+
+  ## item
+
+====================================================================== */
+.c-ordered-list__item {
+  position: relative;
+  display: list-item;
+  padding: 0 0 0 .3rem;
+  line-height: 1.5;
+  list-style-type: inherit;
+}
+
+.c-ordered-list__item + .c-ordered-list__item {
+  margin-top: .5rem;
+}

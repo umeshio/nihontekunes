@@ -1,0 +1,58 @@
+/* ****************************************************************************************************
+
+  # sns
+  - project
+
+**************************************************************************************************** */
+@use '../../foundation/tool/global';
+// ul.p-sns
+//   li.p-sns__divider
+//     a.p-sns__item(href="https://www.facebook.com/" target="_blank")
+//       img.p-sns__icon(src=`global.${_relativePath}assets/img/icon/facebook.svg` alt="facebook")
+
+.p-sns {
+  position: relative;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  margin: 0;
+}
+
+/* ======================================================================
+
+  ## divider
+
+====================================================================== */
+.p-sns__divider {
+  display: block;
+}
+
+.p-sns__divider + .p-sns__divider {
+  margin-left: 2rem;
+}
+@media print, screen and (min-width: global.$breakpoint-min-md) {
+  .p-sns__divider + .p-sns__divider {
+    margin-left: 4rem;
+  }
+}
+
+/* ======================================================================
+
+  ## item
+
+====================================================================== */
+.p-sns__item {
+  display: block;
+}
+
+/* ======================================================================
+
+  ## icon
+
+====================================================================== */
+.p-sns__icon {
+  display: block;
+  width: 2.6rem;
+  height: auto;
+}
